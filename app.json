@@ -1,5 +1,8 @@
 {
   "expo": {
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "name": "native-task-children",
     "slug": "native-task-children",
     "version": "1.0.0",
