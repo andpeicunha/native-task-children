@@ -1,8 +1,10 @@
 {
-  "compilerOptions": {},
-  "extends": "@tsconfig/react-native/tsconfig.json",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx"
-  ]
+	"compilerOptions": {
+		"baseUrl": "./",
+		"paths": {
+			"@img/*": ["./src/assets/img*"]
+		}
+	},
+	"extends": "@tsconfig/react-native/tsconfig.json",
+	"include": ["**/*.ts", "**/*.tsx"]
 }
