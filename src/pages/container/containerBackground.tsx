@@ -15,9 +15,9 @@ export default function ContainerBackground({ children, bgImage }: BackProps) {
 		return (
 			<BgImage
 				source={imageBackground as ImageSourcePropType}
-				className='flex-1 object-cover justify-center'
+				className='object-cover justify-center'
 			>
-				<StyledView className='flex-1 items-center justify-center h-full w-full'>{children}</StyledView>
+				<StyledView className='h-32 w-32 bg-red-300'>{children}</StyledView>
 			</BgImage>
 		)
 	}
