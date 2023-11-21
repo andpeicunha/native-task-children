@@ -1,15 +1,14 @@
 import React from 'react'
 
 import { StatusBar } from 'expo-status-bar'
-import Images from 'src/assets'
-import ContainerBackground from 'src/pages/container/containerBackground'
-import Welcome from 'src/pages/welcome'
+import ContainerBackground from './src/pages/container/containerBackground'
+import Home from './src/pages/home'
 
 export default function App() {
 	return (
-		<ContainerBackground bgImage={Images.background.img2}>
+		<ContainerBackground>
 			<StatusBar style='auto' />
-			<Welcome />
+			<Home />
 		</ContainerBackground>
 	)
 }

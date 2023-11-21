@@ -1,17 +1,14 @@
 import React from 'react'
 import { Alert, Pressable, Text, View } from 'react-native'
 
-import FontAwesome from '@expo/vector-icons/FontAwesome'
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
-
 import { styled } from 'nativewind'
 
-const StyledPressable = styled(Pressable)
-const StyledText = styled(Text)
-const Box = styled(View)
 const Wrapper = styled(View)
+const BoxContainer = styled(View)
+const StyledText = styled(Text)
+const StyledPressable = styled(Pressable)
 
-export default function Welcome() {
+export default function Home() {
 	const createTwoButtonAlert = () =>
 		Alert.alert('Alert Title', 'My Alert Msg', [
 			{
@@ -27,8 +24,14 @@ export default function Welcome() {
 	}
 
 	return (
-		<Wrapper className='grid grid-flow-col auto-cols-max justify-center gap-4 h-full min-w-[90%]'>
-			<Box className='bg-green-300/80 p-4 rounded-lg min-h-[30%] justify-center'>
+		<Wrapper className='flex-1 justify-center'>
+			<StyledText
+				selectable={false}
+				className='text-slate-800 text-lg bg-red-100'
+			>
+				Clique Aqui 🎉
+			</StyledText>
+			<BoxContainer className='bg-green-300'>
 				<StyledPressable
 					className='bg-red-300 rounded-lg shadow-lg shadow-black px-3 py-4 hover:bg-slate-300 active:bg-slate-500'
 					onPress={createTwoButtonAlert}
@@ -40,8 +43,8 @@ export default function Welcome() {
 						Clique Aqui 🎉
 					</StyledText>
 				</StyledPressable>
-			</Box>
-			<Box className='bg-orange-300/80 p-4 rounded-lg min-h-[30%]'>
+			</BoxContainer>
+			{/* <Box className='bg-orange-300/80 p-4 rounded-lg min-h-[30%]'>
 				<MaterialCommunityIcons
 					name='calendar-week'
 					size={32}
@@ -61,7 +64,7 @@ export default function Welcome() {
 				>
 					Login with Facebook
 				</FontAwesome.Button>
-			</Box>
+			</Box> */}
 		</Wrapper>
 	)
 }
