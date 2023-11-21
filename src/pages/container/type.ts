@@ -7,5 +7,5 @@ export type BackProps = {
 	 * Define qual imagem de fundo será usada, é preciso fazer o import @argument bgImage={IMAGES.logos.bg2}
 	 * @requires import IMAGES from 'src/assets'
 	 */
-	bgImage: ImageSourcePropType
+	bgImage?: ImageSourcePropType
 }
